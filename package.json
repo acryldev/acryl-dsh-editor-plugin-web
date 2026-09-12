@@ -37,7 +37,8 @@
         "./lib/index.js",
         "./lib/client.js"
       ]
-    }
+    },
+    "surfaces": ["web"]
   },
   "dsh": {
     "bundle": {
