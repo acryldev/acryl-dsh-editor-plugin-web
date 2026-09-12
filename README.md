@@ -26,19 +26,19 @@ The plugin is a **standard Cordis plugin (npm package)**. It installs with one `
 ### From npm (recommended)
 
 ```bash
-dsh plugin --profile web add acryl-dsh-editor-plugin
+dsh plugin --profile web add acryl-dsh-editor-plugin-web
 ```
 
 ### From GitHub
 
 ```bash
-dsh plugin --profile web add git+https://github.com/acryldev/acryl-dsh-editor-plugin.git
+dsh plugin --profile web add git+https://github.com/acryldev/acryl-dsh-editor-plugin-web.git
 ```
 
 ### From a local directory
 
 ```bash
-dsh plugin --profile web add file:/path/to/acryl-dsh-editor-plugin
+dsh plugin --profile web add file:/path/to/acryl-dsh-editor-plugin-web
 ```
 
 After installing, **restart DSH** (`dsh web --profile web`). A **Files** tab appears in the session main area.
@@ -48,13 +48,13 @@ After installing, **restart DSH** (`dsh web --profile web`). A **Files** tab app
 ACRYL Desktop hosts the same DSH plugin runtime, so the same command works from its built-in terminal — omit the profile flag and the Desktop's active profile is used:
 
 ```bash
-dsh plugin add acryl-dsh-editor-plugin
+dsh plugin add acryl-dsh-editor-plugin-web
 ```
 
 Or install from a local checkout while developing:
 
 ```bash
-dsh plugin add file:/path/to/acryl-dsh-editor-plugin
+dsh plugin add file:/path/to/acryl-dsh-editor-plugin-web
 ```
 
 The Desktop routes `dsh plugin add` through its recoverable install boundary: the active profile is snapshotted, the package is installed, and on success it is reconciled into `dsh.profile.bundles`. **Restart ACRYL Desktop afterwards** so the client module table is re-scanned and the Files tab mounts.
@@ -82,7 +82,7 @@ The two halves are wired at boot: `package.json` declares `dsh.bundle.patch` →
 ## Directory structure
 
 ```
-acryl-dsh-editor-plugin/
+acryl-dsh-editor-plugin-web/
 ├── lib/
 │   ├── index.js           # Host half (Node: fs/git/ripgrep backends + /editor RPC)
 │   └── client.js          # Client half (browser: UI, Monaco, search, preview via /editor RPC)
@@ -98,8 +98,8 @@ acryl-dsh-editor-plugin/
 
 ## Where it's listed
 
-- **DSH Store (featured example):** https://acryl.dev/store/packages/acryl-dsh-editor-plugin — featured at the top of the directory and used as the worked example in the [publishing guide](https://acryl.dev/store/publishing).
-- **npm:** https://www.npmjs.com/package/acryl-dsh-editor-plugin — tagged `dsh-plugin` + `acryl-package`, which is how the store and the DSH Desktop market catalog discover it.
+- **DSH Store (featured example):** https://acryl.dev/store/packages/acryl-dsh-editor-plugin-web — featured at the top of the directory and used as the worked example in the [publishing guide](https://acryl.dev/store/publishing).
+- **npm:** https://www.npmjs.com/package/acryl-dsh-editor-plugin-web — tagged `dsh-plugin` + `acryl-package`, which is how the store and the DSH Desktop market catalog discover it.
 - **Publishing guide:** https://acryl.dev/store/publishing — how to publish your own DSH plugin, using this repository as the reference.
 
 ## License

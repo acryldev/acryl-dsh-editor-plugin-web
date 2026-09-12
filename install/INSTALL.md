@@ -7,19 +7,19 @@ DSH Editor is distributed as a **standard Cordis plugin (npm package)**. It inst
 ### From npm (recommended)
 
 ```bash
-dsh plugin --profile web add acryl-dsh-editor-plugin
+dsh plugin --profile web add acryl-dsh-editor-plugin-web
 ```
 
 ### From GitHub
 
 ```bash
-dsh plugin --profile web add git+https://github.com/acryldev/acryl-dsh-editor-plugin.git
+dsh plugin --profile web add git+https://github.com/acryldev/acryl-dsh-editor-plugin-web.git
 ```
 
 ### From a local directory
 
 ```bash
-dsh plugin --profile web add file:/path/to/acryl-dsh-editor-plugin
+dsh plugin --profile web add file:/path/to/acryl-dsh-editor-plugin-web
 ```
 
 After installing, **restart DSH** (`dsh web --profile web`). A **Files** tab appears in the session main area.
@@ -29,13 +29,13 @@ After installing, **restart DSH** (`dsh web --profile web`). A **Files** tab app
 ACRYL Desktop hosts the same DSH plugin runtime. Run the same command from the Desktop's built-in terminal — the Desktop's active profile is used:
 
 ```bash
-dsh plugin add acryl-dsh-editor-plugin
+dsh plugin add acryl-dsh-editor-plugin-web
 ```
 
 Or, while developing, install from a local checkout:
 
 ```bash
-dsh plugin add file:/path/to/acryl-dsh-editor-plugin
+dsh plugin add file:/path/to/acryl-dsh-editor-plugin-web
 ```
 
 The Desktop routes `dsh plugin add` through its recoverable install boundary: it snapshots the active profile, installs the package, and reconciles it into `dsh.profile.bundles` on success. **Restart ACRYL Desktop afterwards** so the client module table is re-scanned and the Files tab mounts.

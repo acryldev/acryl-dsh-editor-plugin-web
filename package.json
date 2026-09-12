@@ -1,11 +1,11 @@
 {
-  "name": "acryl-dsh-editor-plugin",
-  "version": "0.2.6",
+  "name": "acryl-dsh-editor-plugin-web",
+  "version": "0.1.0",
   "description": "DSH web plugin: a VS Code-style code editor view (file tree, Monaco, ripgrep search/replace, Markdown preview, git diff).",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/acryldev/acryl-dsh-editor-plugin.git"
+    "url": "git+https://github.com/acryldev/acryl-dsh-editor-plugin-web.git"
   },
   "publishConfig": {
     "access": "public"
@@ -45,7 +45,10 @@
     },
     "client": {
       "inject": [
-        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-cordis-client-runner",
+        "@deepseek-ai/dsh-client-ui-session",
         "@deepseek-ai/dsh-client-ui-theme",
         "@deepseek-ai/dsh-client-ui-conversation",
         "@deepseek-ai/dsh-client-ui-settings"
@@ -64,10 +67,14 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@deepseek-ai/dsh-client-runtime": "^0.1.0-rc.6",
-    "@deepseek-ai/dsh-client-ui-theme": "^0.1.0-rc.6",
-    "@deepseek-ai/dsh-client-ui-conversation": "^0.1.0-rc.6",
-    "@deepseek-ai/dsh-client-ui-settings": "^0.1.0-rc.6"
+    "@deepseek-ai/cordis": "^4.0.2",
+    "@deepseek-ai/dsh-client-connection": "^0.1.5-alpha.1",
+    "@deepseek-ai/dsh-client-ui-renderer": "^0.1.5-alpha.1",
+    "@deepseek-ai/dsh-cordis-client-runner": "^0.1.5-alpha.1",
+    "@deepseek-ai/dsh-client-ui-session": "^0.1.5-alpha.1",
+    "@deepseek-ai/dsh-client-ui-theme": "^0.1.5-alpha.1",
+    "@deepseek-ai/dsh-client-ui-conversation": "^0.1.5-alpha.1",
+    "@deepseek-ai/dsh-client-ui-settings": "^0.1.5-alpha.1"
   },
   "peerDependenciesMeta": {
     "react": {
