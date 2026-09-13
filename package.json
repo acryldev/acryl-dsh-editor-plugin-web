@@ -1,6 +1,6 @@
 {
   "name": "acryl-dsh-editor-plugin-web",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DSH web plugin: a VS Code-style code editor view (file tree, Monaco, ripgrep search/replace, Markdown preview, git diff).",
   "type": "module",
   "repository": {
@@ -38,7 +38,9 @@
         "./lib/client.js"
       ]
     },
-    "surfaces": ["web"]
+    "surfaces": [
+      "web"
+    ]
   },
   "dsh": {
     "bundle": {
