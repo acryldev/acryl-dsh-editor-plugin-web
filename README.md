@@ -1,4 +1,12 @@
-# DSH Editor
+# DSH Editor (deprecated — see below)
+
+> **Deprecated.** `acryl-dsh-editor-plugin` (no suffix) is now universal: `dsh.client.platform: "web"` covers both ACRYL Web and ACRYL Desktop identically, since Desktop's client is Chromium-rendered exactly like Web's. This `-web` fork existed only to work around a `dsh-client-connection` RPC-registration bug that also affected the bare package; that bug is now fixed there too (`acryl-dsh-editor-plugin@0.2.7+`). Install the bare package instead:
+>
+> ```bash
+> dsh plugin --profile web add acryl-dsh-editor-plugin
+> ```
+>
+> This fork is deprecated on npm and receives no further updates.
 
 A VS Code-style code editor that runs inside [DeepSeek Harness (DSH)](https://github.com/deepseek-ai/deepseek-harness) — and therefore inside ACRYL Desktop, which hosts the same DSH plugin runtime. It adds a **Files** tab to the session main area with a file tree, the Monaco editor, cross-file search/replace, a Markdown preview, and Git status/diff.
 
