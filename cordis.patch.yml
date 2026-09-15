@@ -11,5 +11,5 @@
 # from that package name via `exports["./client"]`. No profile file edits needed.
 
 - insert:
-    - id: dsh-editor
+    - id: acryl-dsh-editor-plugin-web
       name: 'acryl-dsh-editor-plugin-web'
